@@ -1,5 +1,5 @@
 # resume
-My Resume 
+My Resume - current_resume.pdf
 
 LaTeX source in src/current_resume.tex 
 
