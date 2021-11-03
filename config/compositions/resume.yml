@@ -1,0 +1,14 @@
+version: '2.3'
+services:
+  
+  resume:
+    
+    image: mm/latex    
+
+    volumes:
+      - ./workspace_volume:/usr/local/workspace/
+
+    working_dir: /usr/local/workspace/ 
+    
+    command: bash entry.sh 
+

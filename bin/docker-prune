@@ -1,0 +1,4 @@
+#!/bin/bash                                                                                                                                                                                                                                                                     
+echo 'y' | docker container prune
+echo 'y' | docker volume prune
+echo 'y' | docker network prune
