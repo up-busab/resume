@@ -1,357 +1,39 @@
 \documentclass[10pt]{article}
 \usepackage{graphicx}
-\usepackage{cvhelper}
+%%\usepackage{cvhelper}
 
-\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\input{content.tex}
 
-\newcommand{\myname} { \makeheading{\parbox{12.5cm}{Matthew Aaron Miller} } }
-
-\newcommand{\mycontact}
-{
-\section{Contact Information}
-%
-% NOTE: Mind where the & separators and \\ breaks are in the following
-%       table.
-%
-% ALSO: \rcollength is the width of the right column of the table
-%       (adjust it to your liking; default is 1.85in).
-%
-\newlength{\rcollength}\setlength{\rcollength}{2.5in}%
-%
-\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
-1001 Tenth Avenue & (906) 281-7277  \\
-Houghton, MI, 49931 & \href{mailto:mtthwamllr@gmail.com}{mtthwamllr@gmail.com} \\
-                   & \href{https://github.com/up-busab}{https://github.com/up-busab} \\
-\end{tabular}
-}
-
-\newcommand{\myobjective}{\section{Objective} To obtain a position in software or simulation. I enjoy working on teams, software quality, learning new technologies, and solving problems from many different domains.}
-
-\newcommand{\myeducation}{
-\section{Education}
-\href{http://www.mtu.edu/}{\textbf{Michigan Technological University}} - Houghton, Michigan 
-\begin{outerlist}
-\item[] M.S.,
-        \href{http://www.math.mtu.edu/}{Mathematics}, December 2008        
-        \begin{innerlist}
-         \item Report: \textit{Implementing and Understanding Algorithms in Unified Parallel C}
-%         \item Adviser: \href{http://www.math.mtu.edu/~merk/}{Dr. Philip R. Merkey}
-        \end{innerlist}
-
-\item[] B.S.,
-        \href{http://www.math.mtu.edu/}{Mathematics}, August 2006        
-        \begin{innerlist}
-         \item Minor in \href{http://www.cs.mtu.edu/}{Computer Science}
-        \end{innerlist}
-
-\end{outerlist}
-}
-
-\newcommand{\myawards}{\section{Awards} need to get me some o deez }
-
-\newcommand{\myinterests}{\section{Research Interests} High performance computing, parallel algorithms, Unified Parallel C, combinatorial optimization and search problems, visualization of mathematical objects }
-
-\newcommand{\myteaching}
-{
-
-\section{Academic Experience}
-\href{http://www.finlandia.edu/}{\textbf{Finlandia University}} - Hancock, Michigan
-\begin{outerlist}
-\item[] \textbf{Adjunct Instructor} \hfill August 2010 - December 2010 
-    \begin{innerlist}
-        \item Delivered weekly lectures in addition to developing and grading exams and homework sets.      
-        \item Taught two sections of elementary algebra and worked in the tutoring center.
-    \end{innerlist}
-\end{outerlist}
-\blankline
-
-\href{http://www.mtu.edu}{\textbf{Michigan Technological University}} - Houghton, Michigan
-\begin{outerlist}
-\item[] \textbf{Graduate Student/Adjunct Instructor} \hfill Autumn 2006 - Spring 2010 
-    \begin{innerlist}
-        \item Delivered weekly lectures in addition to developing and grading exams and homework sets. 
-        \item Taught several different courses ranging from elementary algebra to second semester calculus.
-%        \begin{innerlist}
-%	 \item MA2160:  Calculus II with Technology (Spring 2009)
-%	 \item MA1161:  Calculus I with Technology (Spring/Autumn 2007, Spring 2010)
-%	 \item MA1032:  Data, Functions, and Graphs (Autumn 2008, Spring 2009)
-%        \end{innerlist}
-%	\item Hired as adjunct instructor for MA1032 and MA2160 during the Spring of 2009.
-    \end{innerlist}
-
-\item[] \textbf{Math Lab Course Coordinator} \hfill Spring/Summer 2008, Autumn 2009
-    \begin{innerlist}
-     %   \item Collaborated with faculty in the design and implementation of \href{http://www.wolfram.com/}{Mathematica} Labs and Blackboard online quizzes for Calculus I,II, and III.
-	    \item Managed and instructed undergraduate lab TA's.
-        \item Oversaw automated assignment and grading procedures for over 1200 students. 
-    \end{innerlist}
-
-\item[] \textbf{Grader} \hfill Summer 2007
-    \begin{innerlist}
-        \item Graded programs written by students for a graduate level course in scientific programming.
-    \end{innerlist}
-\end{outerlist}
-\blankline
-}
-
-\newcommand{\myrecentprojobs}
-{
-\section{Recent Professional Experience}
-
-\href{http://www.ruralsourcing.com/}{\textbf{Rural Sourcing}} - Atlanta, Georgia (Remote)
-\begin{outerlist}
-\item[] \textbf{Senior Consultant} \hfill  March 2022 - Present
- \begin{innerlist}
-  \item Team Lead for a small group working on Java microservices for a client in call center management.
- \end{innerlist}
-\end{outerlist}
-\blankline
-
-\href{http://www.gotsoccer.com/}{\textbf{GotSoccer LLC}} - Neptune Beach, Florida (Remote)
-\begin{outerlist}
-\item[] \textbf{Optimization Expert} \hfill  February 2019 - February 2022
- \begin{innerlist}
-  \item Solved professional sports scheduling problems modeled as MILPs in Gurobi and CPLEX.
-  \item Devloped constraints and algorithms for a Python library used to solve scheduling problems.
-  \item Built a custom simulated annealing solver in Java for the NBA scheduling problem.  
-  \item Learned Ruby on Rails in order to contribute to web platform integration of pro scheduling system.
-  \item Created a hybrid ticket scanning app for Android and IOS using Ionic/Capacitor and Typescript.     
- \end{innerlist}
-\end{outerlist}
-\blankline
-
-\href{http://www.sagekey.com/}{\textbf{SageKey Software}} - Penticton, British Columbia (Remote)
-\begin{outerlist}
-\item[] \textbf{Software Engineer} \hfill  August 2018 - December 2018
- \begin{innerlist}
-  \item Built an auto part selection system for transmission schematics in .NET, Elastic, and JS; then integrated it into a Magento store.
- \end{innerlist}
-\end{outerlist}
-\blankline
-
-\href{http://www.xeratec.com/}{\textbf{Xeratec Corporation}} - Hancock, Michigan
-\begin{outerlist}
-\item[] \textbf{Software Engineer} \hfill  November 2013 - August 2018
- \begin{innerlist}
-  \item Maintained and extended a Java EE application for a client in the insurance industry.
-  \item Lead programmer on a Java based project using Spring, MS SQL, and Angular for a client in pharmaceutical warehousing.
-  \item Technical lead on a Windows based civil engineering application in Visual C++.  
-  \item Worked on several .NET web applications using MS web frameworks and SQL Server.
- \end{innerlist}
-\end{outerlist}
-\blankline
-}
-
-\newcommand{\mypastprojobs}
-{
-\section{Past Professional Experience}
-
-\href{http://www.signatureresearchinc.com/}{\textbf{Signature Research}} - Calumet, Michigan
-\begin{outerlist}
-\item[] \textbf{Software Engineer I} \hfill  January 2011 - March 2013
- \begin{innerlist}
-  \item Contributed extensively to a physics based temperature prediction and hyperspectral raytracing project capable of generating imagery for any band from thermal to visible.
-  \item Worked with a highly object oriented code base equipped with both multiprocessing and threading capabilities.
-  \item Became familiar with meteorological data and simulations including atmospheric radiation and transmission modeling with \href{http://www.modtran5.com/}{MODTRAN}.
-  \item Implemented several mathematical models for phenomena including ocean waves, cumulus clouds, material based surface reflections, and polarized light. 
- \end{innerlist}
-\end{outerlist}
-\blankline
-
-\href{http://www.imtek.de/}{\textbf{IMTEK, Albert-Ludwigs-Universit\"{a}t}} - Freiburg, Germany
-\begin{outerlist}
- \item[] \noindent {\bf Research Assistant} \hfill January 2009 - July 2009
- \begin{innerlist}
-  \item Attempted to add MPI parallelization to a general purpose particle dynamics code written in C++ with OpenMP. 
- \end{innerlist}
-\end{outerlist}
-\blankline
-	
-\href{http://www.signatureresearchinc.com/}{\textbf{Signature Research}} - Calumet, Michigan
-\begin{outerlist}
-\item[] \textbf{Software Developer} \hfill  April 2008 - September 2008
- \begin{innerlist}
-  \item Worked with a senior researcher to design an image reconstruction algorithm.
-  %\item Implemented and tested the above algorithm on a Beowulf cluster. 
-  \item Created an application for resizing DEM raster data using different interpolation and smoothing algorithms.
- \end{innerlist}
-\end{outerlist}
-\blankline
-
-\textbf{Army High Performance Computing Research Center} - Minneapolis, Minnesota
-\begin{outerlist}
-\item[] \textbf{Student Intern} \hfill June 2005 - August 2005
-\begin{innerlist}
- \item Completed a short research project in computational fluid dynamics. 
- \item Aided other interns to learn about computing on a Cray X1. 
-% \item Obtained DOD clearance for the summer.
-\end{innerlist}
-\end{outerlist}
-}
-
-\newcommand{\myretailjobs}
-{
-\section{Retail Experience}
-
-\href{http://www.bookstore.mtu.edu/michtech2}{\textbf{University Images}} - Houghton, Michigan
-\begin{outerlist}
-\item[] \textbf{Sales Clerk} \hfill  November 2002 - January 2003
- \begin{innerlist}
-  \item Operated a cash register, assisted with inventory, and closed the store.
- \end{innerlist}
-\end{outerlist}
-}
-
-\newcommand{\mypublications}{\section{Publications} \begin{bibsection} \end{bibsection} }
-
-\newcommand{\mypresentations}
-{
-\section{Presentations}
-\begin{outerlist}
-\item[] \textit{The FFTW and NVIDIA CUDA CUFFT Libraries}
-\begin{innerlist}
-\item[] Lecture in CS5331: Parallel Algorithms, Michigan Technological University (2009)
-\end{innerlist}
-\item[] \textit{Effect of Fractal Dimension in a Nanoparticle Growth Simulation}
-\begin{innerlist}
-\item[] Final Presentation, Summer Institute 2005, AHPCRC (2005)
-\end{innerlist}
-\end{outerlist}
-}
-
-\newcommand{\mytechs}
-{
-\section{Technical Skills}
-\begin{outerlist}
-\item[] Modeling optimization problems as MILPs using Gurobi or Cplex in Python.
-\item[] Scientific programming in C, C++, Modern C++, Fortran, Matlab, and Mathematica.
-\item[] Java web application programming using Spring, Maven, MyBatis, Hibernate; deployment on Tomcat servers.
-\item[] Fullstack web development on other platforms such as Ruby on Rails and PHP.
-\item[] Database work in SQL on MS SQL Server, MySQL, and SQLite; including TSQL stored procedures.
-\item[] Obsession with using Docker to package runtime environments and complicated build systems.
-\item[] Experience using continuous integration platforms such as CircleCI and Travis.    
-\item[] Frontend web development for in HTML5, CSS, JS, JQuery, Angular, and Bootstrap. 
-\item[] Mobile app development for Android and IOS using Ionic/Capacitor and Typescript
-\item[] Rules engine development in JBoss Enterprise BRMS (Drools).
-\item[] Experience with .NET web frameworks such as ASP.NET and MS MVC; deployment on IIS
-\item[] .NET programming in C\#, VB, and VC++; including work with Entity Framework.  
-\item[] Integration work in MS SSIS and SSAS; reporting in SSRS and Telerik Reports.
-\item[] Parallel programming on clusters and shared memory architectures in Unified Parallel C, MPI, OpenMP, and NVIDIA CUDA.
-\item[] A broad range of mathematical subjects including advanced calculus, theoretical and numerical linear algebra, and PDEs.
-\item[] Discrete mathematics, including combinatorics, abstract algebra, and algorithms.
-\item[] 3D computer graphics and GUI creation using OpenGL, SDL, and QT.
-\item[] Familiarity with Linux and use of scientific libraries such as FFTW and GSL. 
-\item[] Fluent in \LaTeX{} and noweb systems for documents and presentations.
-\end{outerlist}
-}
-
-\newcommand{\mypeds}
-{
-\section{Pedagogical Skills}
-\begin{outerlist}
-\item[] Document preparation for worksheets, quizzes, and exams using \LaTeX{}.
-\item[] Graphics creation in \href{http://www.wolfram.com/}{Mathematica} and \href{http://www.povray.org/}{POV-ray}.
-\item[] Dynamic animations for classroom use in \href{http://www.wolfram.com/}{Mathematica}.
-\item[] Website creation and management in HTML.
-\end{outerlist}
-}
-
-\newcommand{\myproref}{\section{Professional References}
-
-Walter Sebastian Gisler
-Head of GotPro/Optimization
-GotSoccer LLC
-walter@gotsport.com
-\\
-Aaron Wilmoth
-Chief Technical Officer
-GotSoccer LLC
-aaron@gotsport.com
-\\
-%James Mertens\\
-%Senior Software Engineer/Architect\\
-%Xeratec Corporation (Formerly)\\
-%401 Hancock St\\
-%Hancock, MI 49930\\
-%906.482.6765\\
-%james.mertens@xeratec.com\\
-%\\
-%Ken Byers\\
-%Senior Software Engineer/Chapter Lead\\
-%Xeratec Corporation\\
-%401 Hancock St\\
-%Hancock, MI 49930\\
-%906.482.6765\\
-%ken.byers@xeratec.com\\
-%\\
-%Denise Talcott\\
-%Manager of Scientific Computing\\
-%Signature Research, Inc.\\ 
-%P.O. Box 346\\
-%56905 Calumet Avenue\\
-%Calumet, MI 49913\\
-%906.337.3360\\
-%talcott@signatureresearchinc.com\\
-%\\
-%Larry Coke\\
-%Head Scientist\\
-%Signature Research, Inc.\\ 
-%P.O. Box 346\\
-%56905 Calumet Avenue\\
-%Calumet, MI 49913\\
-%906.337.3360\\
-%coke@signatureresearchinc.com\\
-%\\
-%Philip R. Merkey, Ph.D.\\
-%Parallel Computing Researcher\\
-%merk@mtu.edu\\
-%\\
-%John Hilgers, Ph.D.\\
-%Researcher\\
-%Signature Research, Inc.\\ 
-%P.O. Box 346\\
-%56905 Calumet Avenue\\
-%Calumet, MI 49913\\
-%906.337.3360\\
-%hilgers@signatureresearchinc.com\\
-%\\
-%Barbara Bertram, Ph.D.\\
-%Professor of Mathematics, retired\\
-%1201 7th Avenue\\
-%Houghton, MI 49931\\
-%906.482.6416\\
-}
+\pagestyle{empty}     
 
 \begin{document}
+Matthew Aaron Miller
 
-\myname
+\begin{minipage}{0.48\linewidth}
+ \section{Objective}
+ \myobjective
+\end{minipage}    
 
-\mycontact
+\begin{minipage}{0.48\linewidth}
+ \section{Contact Information}
+ \mycontact
+\end{minipage}
 
-\myobjective
-
+\section{Recent Professional Experience}
 \myrecentprojobs
 
+\section{Education}
 \myeducation
 
+\section{Technical Skills}
 \mytechs
 
+\section{Past Professional Experience}
 \mypastprojobs
 
+\section{Academic Experience}
 \myteaching
 
-%\mypeds
-
-%\myretailjobs
-
-%\myinterests
-
-%\mypresentations
-
-%myretailref
-%Professional references available upon request.
-
-%\myproref
 
 \end{document}
 

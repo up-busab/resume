@@ -1,8 +1,7 @@
 
 ROOT = ${abspath .}
 RUNTIME = ${ROOT}/runtime
-IMAGES = ${ROOT}/config/images
-COMPOSITIONS = ${ROOT}/config/compositions
+IMAGES = ${ROOT}/images
 
 SRC = ${ROOT}/src
 
@@ -20,7 +19,7 @@ images: latex_image
 latex_image: ${LATEX_IMAGE_DIR}/Dockerfile 
 	docker build --tag mm/latex ${LATEX_IMAGE_DIR}
 
-instance: entry workspace_link compositions 
+instance: entry workspace_link composition 
 
 entry:
 	mkdir -p ${INSTANCE}
@@ -29,8 +28,8 @@ entry:
 workspace_link:  
 	ln -sfn ${INSTANCE} ${RUNTIME}/workspace_volume
 
-compositions:
-	cp -rvf ${COMPOSITIONS}/resume.yml ${RUNTIME}
+composition:
+	cp -rvf resume.yml ${RUNTIME}
 
 #clean will remove running containers and server config
 #sterile will clean, then remove ALL volumes and ALL images- even unrelated ones
