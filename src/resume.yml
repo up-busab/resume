@@ -6,7 +6,7 @@ services:
     image: mm/latex    
 
     volumes:
-      - ./workspace_volume:/usr/local/workspace/
+      - ./instance:/usr/local/workspace/
 
     working_dir: /usr/local/workspace/ 
     

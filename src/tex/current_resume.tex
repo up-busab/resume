@@ -1,0 +1,216 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage[dvipsnames,cmyk]{xcolor}
+\usepackage{libertine}
+%\usepackage[sc]{mathpazo}
+\usepackage{hyperref,ulem,contour}
+\usepackage{tikz}
+\usepackage{paralist}
+\usepackage{titlesec}
+\usetikzlibrary{calc}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\hrefgreen}[2]{\href{#1}{\color{ForestGreen}\uline{\phantom{#2}}\llap{\contour{white}{#2}} }}
+\newcommand{\hrefblack}[2]{\href{#1}{\color{Black}\uline{\phantom{#2}}\llap{\contour{Cerulean}{#2}} }}
+
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{.98\columnwidth}{1pt}%
+         \end{minipage}}
+
+\titleformat{\section}{\large\scshape}{\thesection}{1.25em}{}
+
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+\newenvironment{outerlist2}[1][\enskip\textbullet]{\begin{compactitem}[#1]}{\end{compactitem}}
+
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+\newcommand{\tpc}{\textbf{\textperiodcentered}\,}
+
+\pagestyle{empty}     
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+    \path (0.95\textwidth+0.5cm , 1.5) coordinate (p1) {};
+    \path (0.65\textwidth+0.25cm, 1.5) coordinate (p2) {};
+    \path (0.95\textwidth+0.5cm , -30) coordinate (p3) {};
+    \path (0.65\textwidth+0.25cm, -30) coordinate (p4) {};
+    %\path (19.97,-0.5) coordinate (p1) {};
+    %\path (13.56,-0.5) coordinate (p2) {};
+    %\path (19.97,0.5) coordinate (p3) {};
+    %\path (13.56,0.5) coordinate (p4) {};
+    \fill[shade,bottom color=Cerulean,top color=Cerulean] (p1) -- (p2) -- (p4) -- (p3);
+\end{tikzpicture}
+\makeheading{Matthew Aaron Miller}
+\begin{minipage}[b][25cm][t]{\dimexpr0.65\textwidth}
+    \bigbreak
+    \section*{Experience}
+   \hrefgreen{http://www.teamsparq.com/}{\textbf{Sparq}} - Atlanta, Georgia (Remote)
+\begin{outerlist}
+    \item[] \textbf{Senior Consultant} \hfill  March 2022 - Present
+     \begin{innerlist}
+      \item Contributed to an API for a health coaching company in Java on AWS.
+      \item Team Lead for a small group working on Java microservices for a client in call center management.
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \hrefgreen{http://www.gotsoccer.com/}{\textbf{GotSoccer LLC}} - Neptune Beach, Florida (Remote)
+    \begin{outerlist}
+    \item[] \textbf{Optimization Expert} \hfill  February 2019 - February 2022
+     \begin{innerlist}
+      \item Solved professional sports scheduling problems modeled as MILPs in Gurobi and CPLEX.
+      \item Developed constraints and algorithms for a Python library used to solve scheduling problems.
+      \item Built a custom simulated annealing solver in Java for the NBA scheduling problem.  
+      \item Learned Ruby on Rails in order to contribute to web platform integration of pro scheduling system.
+      \item Created a hybrid ticket scanning app for Android and IOS using Ionic/Capacitor and Typescript.     
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \hrefgreen{http://www.sagekey.com/}{\textbf{SageKey Software}} - Penticton, British Columbia (Remote)
+    \begin{outerlist}
+    \item[] \textbf{Software Engineer} \hfill  August 2018 - December 2018
+     \begin{innerlist}
+      \item Built an auto part selection system for transmission schematics in .NET, Elastic, and JS; then integrated it into a Magento store.
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \hrefgreen{http://www.xeratec.com/}{\textbf{Xeratec Corporation}} - Hancock, Michigan
+    \begin{outerlist}
+    \item[] \textbf{Software Engineer} \hfill  November 2013 - August 2018
+     \begin{innerlist}
+      \item Maintained and extended a Java EE application for a client in the insurance industry.
+      \item Lead programmer on a Java based project using Spring, MS SQL, and Angular for a client in pharmaceutical warehousing.
+      \item Technical lead on a Windows based civil engineering application in Visual C++.  
+      \item Worked on several .NET web applications using MS web frameworks and SQL Server.
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \hrefgreen{http://www.signatureresearchinc.com/}{\textbf{Signature Research}} - Calumet, Michigan
+    \begin{outerlist}
+    \item[] \textbf{Software Engineer I} \hfill  January 2011 - March 2013
+     \begin{innerlist}
+      \item Contributed extensively to a physics based temperature prediction and hyperspectral raytracing project capable of generating imagery for any band from thermal to visible.
+      \item Worked with a highly object oriented code base equipped with both multiprocessing and threading capabilities.
+      \item Became familiar with meteorological data and simulations including atmospheric radiation and transmission modeling with \hrefgreen{http://www.modtran5.com/}{MODTRAN}.
+      \item Implemented several mathematical models for phenomena including ocean waves, cumulus clouds, material based surface reflections, and polarized light. 
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \hrefgreen{http://www.imtek.de/}{\textbf{IMTEK, Albert-Ludwigs-Universit\"{a}t}} - Freiburg, Germany
+    \begin{outerlist}
+     \item[] \noindent {\bf Research Assistant} \hfill January 2009 - July 2009
+     \begin{innerlist}
+      \item Attempted to add MPI parallelization to a general purpose particle dynamics code written in C++ with OpenMP. 
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+        
+    \hrefgreen{http://www.signatureresearchinc.com/}{\textbf{Signature Research}} - Calumet, Michigan
+    \begin{outerlist}
+    \item[] \textbf{Software Developer} \hfill  April 2008 - September 2008
+     \begin{innerlist}
+      \item Worked with a senior researcher to design an image reconstruction algorithm.
+      \item Created an application for resizing DEM raster data using different interpolation and smoothing algorithms.
+     \end{innerlist}
+    \end{outerlist}
+    \blankline
+
+    \textbf{Army High Performance Computing Research Center} - Minneapolis, Minnesota
+    \begin{outerlist}
+    \item[] \textbf{Student Intern} \hfill June 2005 - August 2005
+    \begin{innerlist}
+     \item Completed a short research project in computational fluid dynamics. 
+     \item Aided other interns to learn about computing on a Cray X1. 
+    \end{innerlist}
+    \end{outerlist}
+\end{minipage}
+\hfill
+\fcolorbox{Cerulean}{Cerulean}{%
+\begin{minipage}[b][25cm][t]{0.3\textwidth}
+  \bigbreak
+  \section*{Contact}
+    \begin{outerlist2}
+    \item[] (906) 281-7277
+    \item[] \hrefblack{mailto:mtthwamllr@gmail.com}{mtthwamllr@gmail.com} 
+    \item[] \hrefblack{https://github.com/up-busab}{https://github.com/up-busab}
+    %\item[] 1001 Tenth Avenue, Houghton MI, 49931 
+    \end{outerlist2}
+  \bigbreak
+  \section*{Skills}
+    \begin{outerlist}
+    \item[] \textbf{Code Polyglot}
+      \begin{innerlist}
+        \item[] \raggedright C \tpc C++ \tpc Python \tpc Java \tpc C\# \tpc Fortran \tpc 
+          TypeScript \tpc JavaScript \tpc Ruby \tpc Visual Basic \tpc PHP 
+      \end{innerlist}    
+  \item[] \textbf{Mathematical Programming}
+      \begin{innerlist}
+        \item[] \raggedright Gurobi \tpc CPLEX \tpc Mathematica \tpc Matlab \tpc FFTW 
+      \end{innerlist}
+     \item[] \textbf{Databases}
+      \begin{innerlist}
+        \item[] \raggedright Postgres \tpc MariaDB \tpc MS SQL \tpc MongoDB \tpc Elasticsearch 
+      \end{innerlist}
+    \item[] \textbf{Devops \& Build Systems}
+      \begin{innerlist}
+        \item[] \raggedright Docker \tpc Kubernetes \tpc Maven \tpc make \tpc Travis \tpc CircleCI \tpc Github Actions 
+      \end{innerlist}
+  \item[] \textbf{Graphics \& GUI}
+      \begin{innerlist}
+        \item[] \raggedright OpenGL \tpc SDL \tpc QT \tpc Mitsuba \tpc POVRay \tpc Visual C++ 
+      \end{innerlist}
+    \item[] \textbf{Parallel Programming}
+      \begin{innerlist}
+        \item[] \raggedright MPI \tpc OpenMP \tpc PThreads \tpc NVIDIA CUDA \tpc UPC 
+      \end{innerlist}   
+    \item[] \textbf{Web Frameworks}
+      \begin{innerlist}
+        \item[] \raggedright Spring/Spring Boot \tpc .NET \tpc Rails \tpc Magento
+      \end{innerlist}       
+    \item[] \textbf{Frontend \& Mobile Technologies}
+      \begin{innerlist}
+        \item[] \raggedright Angular \tpc HTML 5 \tpc CSS \tpc Bootstrap \tpc Ionic/Capacitor \tpc JQuery
+      \end{innerlist}
+    \end{outerlist}
+  \bigbreak
+  \section*{Education}
+    \begin{outerlist}
+    \item[] \raggedright \textbf{M.S. - Mathematics}
+        \linebreak
+        \hrefblack{http://www.mtu.edu/}{Michigan Tech}, 2008
+        \begin{innerlist}
+         \item Combinatorics \& Algebra  
+         \item Algorithms \& High Performance Computing
+        \end{innerlist}
+    \item[] \raggedright \textbf{B.S. - Mathematics}
+        \linebreak
+        \hrefblack{http://www.mtu.edu/}{Michigan Tech}, 2006
+        \begin{innerlist}
+            \item Minor in Computer Science
+        \end{innerlist}
+    \end{outerlist}
+\end{minipage}}
+
+\end{document}
+
